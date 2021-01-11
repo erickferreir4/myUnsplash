@@ -27,10 +27,10 @@ class AppController
             return 'app\controller\IndexController'; 
         }
 
-        $file = __DIR__ . "/{$relativeClass}Controller.php";
+        $file = __DIR__ . '/' . $relativeClass . 'Controller.php';
 
         if( file_exists($file) ) {
-            return "app\controller\{$relativeClass}Controller";
+            return 'app\controller\\' . $relativeClass . 'Controller';
         }
 
         return 'app\controller\NotFoundController';

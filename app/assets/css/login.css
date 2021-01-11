@@ -1,0 +1,16 @@
+.content{
+    background-image:url('../imgs/bg.jpg');
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    background-color: #fff;
+    width: 50%;
+    border-radius: 10px;
+}
