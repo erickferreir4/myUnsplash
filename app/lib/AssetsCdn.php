@@ -16,7 +16,7 @@ class AssetsCdn implements IAssets
      */
     public function loadStyles( string $link ) : string
     {
-        $src = file_get_contents(__DIR__ . '/../html/template/css.css');
+        $src = file_get_contents(__DIR__ . '/../html/templates/css.html');
         $src = str_replace('[[CSS]]', $link, $src);
 
         return $src;
@@ -29,7 +29,7 @@ class AssetsCdn implements IAssets
      */
     public function loadScripts( string $link ) : string
     {
-        $src = file_get_contents(__DIR__ . '/../html/template/js.css');
+        $src = file_get_contents(__DIR__ . '/../html/templates/js.html');
         $src = str_replace('[[CSS]]', $link, $src);
 
         return $src;

@@ -4,6 +4,7 @@ namespace app\traits;
 
 use app\interfaces\IAssets;
 use app\lib\Assets;
+use app\lib\AssetsCdn;
 
 /**
  *  Default config all pages
@@ -74,5 +75,8 @@ trait TemplateTrait
         $this->addCss('general');
 
         $this->addJs('general');
+
+        $this->setAssets( new AssetsCdn );
+        $this->addCss('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap');
     }
 }
