@@ -14,9 +14,15 @@ class IndexController
 
     public function __construct()
     {
+        session_start();
+
         $this->addAssets();
         $this->setTitle('Home');
         $this->layout('Index');
+
+        var_dump($_SESSION);
+
+
     }
 
     public function addAssets()

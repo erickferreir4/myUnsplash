@@ -3,6 +3,7 @@
 namespace app\helpers;
 
 use app\helpers\ConnectionFactory;
+use app\interfaces\ILogger;
 use PDO;
 
 /**
@@ -11,7 +12,7 @@ use PDO;
 class Transaction
 {
     private static $conn;
-    //private static $logger;
+    private static $logger;
 
     private function __construct()
     {
@@ -51,7 +52,7 @@ class Transaction
     }
 
     /**
-     *  Finish(close0 connection
+     *  Finish(close connection)
      */
     public static function close() : void
     {
@@ -59,5 +60,15 @@ class Transaction
             self::$conn->commit();
             self::$conn = null;
         }
+    }
+
+    public static function setLogger(ILogger $logger) : void
+    {
+        self::$logger = $logger; 
+    }
+    
+    public static function log($message) : void
+    {
+        self::$logger->write($message);
     }
 }

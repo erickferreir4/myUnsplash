@@ -1,0 +1,31 @@
+2021-01-14 06:02:26 :: CREATE TABLE IF NOT EXISTS users
+                (
+                    id INTEGER PRIMARY KEY,
+                    email VARCHAR(100) NOT NULL
+                )2021-01-14 06:02:31 :: CREATE TABLE IF NOT EXISTS users
+                (
+                    id INTEGER PRIMARY KEY,
+                    email VARCHAR(100) NOT NULL
+                )2021-01-14 06:03:33 :: CREATE TABLE IF NOT EXISTS users
+                (
+                    id INTEGER PRIMARY KEY,
+                    email VARCHAR(100) NOT NULL
+                )
+2021-01-14 06:04:51 :: CREATE TABLE IF NOT EXISTS users
+                (
+                    id INTEGER PRIMARY KEY,
+                    email VARCHAR(100) NOT NULL
+                )
+2021-01-14 06:05:13 :: CREATE TABLE IF NOT EXISTS users
+                (
+                    id INTEGER PRIMARY KEY,
+                    email VARCHAR(100) NOT NULL
+                ) 
+
+2021-01-14 06:05:40 :: CREATE TABLE IF NOT EXISTS users
+                (
+                    id INTEGER PRIMARY KEY,
+                    email VARCHAR(100) NOT NULL
+                ) 
+ 
+ 
