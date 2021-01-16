@@ -15,21 +15,23 @@ class IndexController
     public function __construct()
     {
         session_start();
+        if(!isset($_SESSION['login'])) {
+           header('location:login'); 
+        }
 
         $this->addAssets();
         $this->setTitle('Home');
         $this->layout('Index');
 
         var_dump($_SESSION);
-
-
     }
 
     public function addAssets()
     {
-        //$this->setAssets( new Assets );
+        $this->setAssets( new Assets );
 
-        //$this->addCss('style');
+        $this->addCss('index');
+        $this->addCss('header');
         //$this->addJs('index');
     }
 }

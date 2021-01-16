@@ -1,0 +1,59 @@
+.header-center {
+    display: flex;
+    align-items: center;
+    padding: 30px 100px;
+}
+.header-center > div:first-of-type {
+    display: flex;
+    align-items: center;
+    margin-right: 55px;
+}
+
+.header-center div img{
+    width: 20px;
+    margin-right: 10px;
+}
+
+.header-center span{
+    line-height: 15px;
+}
+.header-center div h3{
+    font-size: 14px;
+    color: #000;
+}
+
+.header-center div p{
+    font-size: 10px;
+}
+
+.header-center div input{
+    width: 300px;
+    font-size: 14px;
+    border-radius: 12px;
+    border: 1px solid #BDBDBD;
+    padding: 18px;
+}
+.header-center div input::placeholder{
+    color:#BDBDBD;
+}
+.header-center div:nth-of-type(2){
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.header-center div i{
+    position: absolute;
+    right: 0;
+}
+.header-center div:last-of-type{
+    margin-left: auto;
+}
+.header-center div button{
+    background-color: #3DB46D;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 12px;
+    padding: 18px;
+    width: 140px;
+}

@@ -1,0 +1,81 @@
+.content {
+    padding: 30px 100px;
+}
+
+.content ul {
+    -moz-column-count:    3;
+    -webkit-column-count: 3;
+    column-count:         3;
+    line-height: 0;
+    -webkit-column-gap:   25px;
+    -moz-column-gap:      25px;
+    column-gap:           25px;
+}
+
+.content li {
+    margin-bottom: 25px
+}
+
+.content li figure {
+    border-radius: 16px;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.content li figure img{
+    width: 100% !important;
+    height: auto !important;
+    transition: .3s;
+}
+.content li figure:hover img{
+    transform: scale(1.2);
+    filter: brightness(0.7);
+}
+
+.content li figure:hover figcaption{
+    opacity: 1;
+}
+
+.content li figure figcaption{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 24px;
+    background: transparent;
+}
+
+#js-show-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: #00000099;
+    padding: 100px;
+    display: none;
+}
+#js-show-img.is--active {
+    display: flex;
+}
+#js-show-img span{
+    position: relative;
+    text-align: center;
+}
+#js-show-img span img{
+    max-width: 100%;
+}
+#js-show-img button{
+    position: absolute;
+    top: -25px;
+    color: #fff;
+    font-size: 20px;
+    right: 0;
+}
