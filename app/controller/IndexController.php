@@ -32,6 +32,6 @@ class IndexController
 
         $this->addCss('index');
         $this->addCss('header');
-        //$this->addJs('index');
+        $this->addJs('index');
     }
 }

@@ -10,12 +10,12 @@
         </div>
 
         <div>
-            <input type="text" placeholder="Search by name"/>
+            <input type="text" id="js-search" placeholder="Search by name"/>
             <i><img src="/assets/imgs/loupe.svg" /></i>
         </div>
 
         <div>
-            <button>Add a photo</button>
+            <button id="js-add">Add a photo</button>
         </div>
 
     </div>
