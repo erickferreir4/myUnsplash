@@ -57,19 +57,20 @@
     </div>
 
 
-    <div class="file" id="js-file">
+    <div class="file" id="js-file" >
         <div class="file__center">
             <h3>Add a new photo</h3>
-            <form>
+            <form enctype="multipart/form-data" action="/file" method="POST">
                 <label>Label</label>
-                <input type="text" placeholder="" required/>
+                <input type="text" name="label" placeholder="" required/>
                 
                 <label>Photo URL</label>
-                <input type="text" placeholder="" />
+                <input type="text" name="photo-url" placeholder="" />
 
                 <label>File</label>
                 <button type="button" onclick="document.querySelector('#get-file').click()">Choose File</button>
-                <input style="display: none;" type="file" id="get-file"/>
+                <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+                <input style="display: none;" type="file" name="userfile" id="get-file"/>
                 <ul id="js-file-name"></ul>
 
                 <span>

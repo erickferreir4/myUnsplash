@@ -106,10 +106,7 @@ const Index = {
         let file = doc.querySelector('#get-file')
 
         let closure_ = ev => {
-            console.dir(ev.target)
-
             let name = ev.target.files[0].name
-            console.log(name)
             doc.querySelector('#js-file-name')
                 .innerHTML = "<li>"+name+"</li>"
         }

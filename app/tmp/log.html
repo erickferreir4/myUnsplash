@@ -157,4 +157,228 @@
                     email VARCHAR(100) NOT NULL UNIQUE
                 )</h3><br /><br /><h3>2021-01-16 07:31:08 :: SELECT * FROM users
                 WHERE
-                    email = :email</h3><br /><br />
+                    email = :email</h3><br /><br /><h3>2021-01-20 06:30:04 :: create table if not exists files
+                (
+                    id integer primary key,
+                    id-user varchar(250) not null,
+                    file varchar(250),
+                    photo-url varchar(250)
+                )</h3><br /><br /><h3>2021-01-20 06:30:04 :: SQLSTATE[HY000]: General error: 1 near "-": syntax error</h3><br /><br /><h3>2021-01-20 06:31:00 :: create table if not exists files
+                (
+                    id integer primary key,
+                    id_user varchar(250) not null,
+                    file varchar(250),
+                    photo_url varchar(250)
+                )</h3><br /><br /><h3>2021-01-20 06:31:02 :: create table if not exists files
+                (
+                    id integer primary key,
+                    id_user varchar(250) not null,
+                    file varchar(250),
+                    photo_url varchar(250)
+                )</h3><br /><br /><h3>2021-01-20 06:32:27 :: create table if not exists files
+                (
+                    id integer primary key,
+                    id_user varchar(250) not null,
+                    file varchar(250),
+                    photo_url varchar(250)
+                )</h3><br /><br /><h3>2021-01-20 06:32:27 :: select * from files</h3><br /><br /><h3>2021-01-20 06:47:38 :: create table if not exists files
+                (
+                    id integer primary key,
+                    id_user varchar(250) not null,
+                    file varchar(250),
+                    photo_url varchar(250),
+                    label varchar(250) not null
+                )</h3><br /><br /><h3>2021-01-20 06:47:38 :: select * from files</h3><br /><br /><h3>2021-01-20 06:50:44 :: create table if not exists files
+                (
+                    id integer primary key,
+                    id_user varchar(250) not null,
+                    file varchar(250),
+                    photo_url varchar(250),
+                    label varchar(250) not null
+                )</h3><br /><br /><h3>2021-01-20 06:51:03 :: create table if not exists files
+                (
+                    id integer primary key,
+                    id_user varchar(250) not null,
+                    file varchar(250),
+                    photo_url varchar(250),
+                    label varchar(250) not null
+                )</h3><br /><br /><h3>2021-01-20 06:51:03 :: insert into files
+                    (id_user, file, photo_url, label)
+                values
+                    (:id_user, :file, :photo_url, :label)</h3><br /><br /><h3>2021-01-20 06:51:03 :: SQLSTATE[HY000]: General error: 1 table files has no column named label</h3><br /><br /><h3>2021-01-20 06:51:48 :: create table if not exists files
+                (
+                    id integer primary key,
+                    id_user varchar(250) not null,
+                    file varchar(250),
+                    photo_url varchar(250),
+                    label varchar(250) not null
+                )</h3><br /><br /><h3>2021-01-20 06:51:48 :: insert into files
+                    (id_user, file, photo_url, label)
+                values
+                    (:id_user, :file, :photo_url, :label)</h3><br /><br /><h3>2021-01-20 06:51:48 :: select * from files</h3><br /><br /><h3>2021-01-20 06:52:51 :: create table if not exists files
+                (
+                    id integer primary key,
+                    id_user varchar(250) not null,
+                    file varchar(250),
+                    photo_url varchar(250),
+                    label varchar(250) not null
+                )</h3><br /><br /><h3>2021-01-20 06:52:51 :: insert into files
+                    (id_user, file, photo_url, label)
+                values
+                    (:id_user, :file, :photo_url, :label)</h3><br /><br /><h3>2021-01-20 06:52:51 :: select * from files</h3><br /><br /><h3>2021-01-20 06:53:04 :: create table if not exists files
+                (
+                    id integer primary key,
+                    id_user varchar(250) not null,
+                    file varchar(250),
+                    photo_url varchar(250),
+                    label varchar(250) not null
+                )</h3><br /><br /><h3>2021-01-20 06:53:04 :: insert into files
+                    (id_user, file, photo_url, label)
+                values
+                    (:id_user, :file, :photo_url, :label)</h3><br /><br /><h3>2021-01-20 06:53:05 :: select * from files</h3><br /><br /><h3>2021-01-20 06:54:11 :: create table if not exists files
+                (
+                    id integer primary key,
+                    id_user varchar(250) not null,
+                    file varchar(250),
+                    photo_url varchar(250),
+                    label varchar(250) not null
+                )</h3><br /><br /><h3>2021-01-20 06:54:11 :: insert into files
+                    (id_user, file, photo_url, label)
+                values
+                    (:id_user, :file, :photo_url, :label)</h3><br /><br /><h3>2021-01-20 06:54:11 :: select * from files</h3><br /><br /><h3>2021-01-20 06:54:25 :: create table if not exists files
+                (
+                    id integer primary key,
+                    id_user varchar(250) not null,
+                    file varchar(250),
+                    photo_url varchar(250),
+                    label varchar(250) not null
+                )</h3><br /><br /><h3>2021-01-20 06:54:25 :: select * from files</h3><br /><br /><h3>2021-01-20 06:54:26 :: create table if not exists files
+                (
+                    id integer primary key,
+                    id_user varchar(250) not null,
+                    file varchar(250),
+                    photo_url varchar(250),
+                    label varchar(250) not null
+                )</h3><br /><br /><h3>2021-01-20 06:54:26 :: select * from files</h3><br /><br /><h3>2021-01-20 06:54:27 :: create table if not exists files
+                (
+                    id integer primary key,
+                    id_user varchar(250) not null,
+                    file varchar(250),
+                    photo_url varchar(250),
+                    label varchar(250) not null
+                )</h3><br /><br /><h3>2021-01-20 06:54:27 :: select * from files</h3><br /><br /><h3>2021-01-20 06:54:30 :: create table if not exists files
+                (
+                    id integer primary key,
+                    id_user varchar(250) not null,
+                    file varchar(250),
+                    photo_url varchar(250),
+                    label varchar(250) not null
+                )</h3><br /><br /><h3>2021-01-20 06:54:30 :: select * from files</h3><br /><br /><h3>2021-01-20 07:07:57 :: create table if not exists files
+                (
+                    id integer primary key,
+                    id_user varchar(250) not null,
+                    file varchar(250),
+                    photo_url varchar(250),
+                    label varchar(250) not null
+                )</h3><br /><br /><h3>2021-01-20 07:07:57 :: select * from files</h3><br /><br /><h3>2021-01-20 07:12:39 :: create table if not exists files
+                (
+                    id integer primary key,
+                    id_user varchar(250) not null,
+                    file varchar(250),
+                    photo_url varchar(250),
+                    label varchar(250) not null
+                )</h3><br /><br /><h3>2021-01-20 07:12:40 :: select * from files
+                where
+                    id_user = :id_user</h3><br /><br /><h3>2021-01-20 07:12:51 :: create table if not exists files
+                (
+                    id integer primary key,
+                    id_user varchar(250) not null,
+                    file varchar(250),
+                    photo_url varchar(250),
+                    label varchar(250) not null
+                )</h3><br /><br /><h3>2021-01-20 07:12:51 :: select * from files
+                where
+                    id_user = :id_user</h3><br /><br /><h3>2021-01-20 07:24:21 :: create table if not exists files
+                (
+                    id integer primary key,
+                    id_user varchar(250) not null,
+                    file varchar(250),
+                    photo_url varchar(250),
+                    label varchar(250) not null
+                )</h3><br /><br /><h3>2021-01-20 07:24:21 :: insert into files
+                    (id_user, file, photo_url, label)
+                values
+                    (:id_user, :file, :photo_url, :label)</h3><br /><br /><h3>2021-01-20 07:29:50 :: create table if not exists files
+                (
+                    id integer primary key,
+                    id_user varchar(250) not null,
+                    file varchar(250),
+                    photo_url varchar(250),
+                    label varchar(250) not null
+                )</h3><br /><br /><h3>2021-01-20 07:29:50 :: select * from files
+                where
+                    id_user = :id_user</h3><br /><br /><h3>2021-01-20 07:30:02 :: create table if not exists files
+                (
+                    id integer primary key,
+                    id_user varchar(250) not null,
+                    file varchar(250),
+                    photo_url varchar(250),
+                    label varchar(250) not null
+                )</h3><br /><br /><h3>2021-01-20 07:30:02 :: select * from files
+                where
+                    id_user = :id_user</h3><br /><br /><h3>2021-01-20 07:31:04 :: create table if not exists files
+                (
+                    id integer primary key,
+                    id_user varchar(250) not null,
+                    file varchar(250),
+                    photo_url varchar(250),
+                    label varchar(250) not null
+                )</h3><br /><br /><h3>2021-01-20 07:31:04 :: select * from files
+                where
+                    id_user = :id_user</h3><br /><br /><h3>2021-01-20 07:31:24 :: create table if not exists files
+                (
+                    id integer primary key,
+                    id_user varchar(250) not null,
+                    file varchar(250),
+                    photo_url varchar(250),
+                    label varchar(250) not null
+                )</h3><br /><br /><h3>2021-01-20 07:31:24 :: insert into files
+                    (id_user, file, photo_url, label)
+                values
+                    (:id_user, :file, :photo_url, :label)</h3><br /><br /><h3>2021-01-20 07:31:24 :: create table if not exists files
+                (
+                    id integer primary key,
+                    id_user varchar(250) not null,
+                    file varchar(250),
+                    photo_url varchar(250),
+                    label varchar(250) not null
+                )</h3><br /><br /><h3>2021-01-20 07:31:24 :: select * from files
+                where
+                    id_user = :id_user</h3><br /><br /><h3>2021-01-20 07:34:36 :: create table if not exists files
+                (
+                    id integer primary key,
+                    id_user varchar(250) not null,
+                    file varchar(250),
+                    photo_url varchar(250),
+                    label varchar(250) not null
+                )</h3><br /><br /><h3>2021-01-20 07:34:36 :: select * from files
+                where
+                    id_user = :id_user</h3><br /><br /><h3>2021-01-20 07:34:42 :: create table if not exists files
+                (
+                    id integer primary key,
+                    id_user varchar(250) not null,
+                    file varchar(250),
+                    photo_url varchar(250),
+                    label varchar(250) not null
+                )</h3><br /><br /><h3>2021-01-20 07:34:42 :: select * from files
+                where
+                    id_user = :id_user</h3><br /><br /><h3>2021-01-20 07:34:49 :: create table if not exists files
+                (
+                    id integer primary key,
+                    id_user varchar(250) not null,
+                    file varchar(250),
+                    photo_url varchar(250),
+                    label varchar(250) not null
+                )</h3><br /><br /><h3>2021-01-20 07:34:49 :: select * from files
+                where
+                    id_user = :id_user</h3><br /><br />
