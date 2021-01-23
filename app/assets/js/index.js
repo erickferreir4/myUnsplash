@@ -101,27 +101,23 @@ const Index = {
         btn.addEventListener('click', closure_, false)
     },
 
-    __fileName() {
-
-        let file = doc.querySelector('#get-file')
-
-        let closure_ = ev => {
-            let name = ev.target.files[0].name
-            doc.querySelector('#js-file-name')
-                .innerHTML = "<li>"+name+"</li>"
-        }
-
-        file.addEventListener('change', closure_, false)
-    },
-
     __delete() {
-        let btn = doc.querySelector('.js-delete')
+        let btn = doc.querySelectorAll('.js-delete')
 
         let closure_ = ev => {
-            alert();
+
+            let file = ev.target.nextElementSibling.src
+
+            let data = new FormData();
+            data.append('photo_url', file)
+
+            fetch("/file/delete", {method: "POST",body: data})
+            ev.target.closest('li').remove();
         }
 
-        btn.addEventListener('click', closure_, false)
+        btn.forEach( el => {
+            el.addEventListener('click', closure_, false)
+        })
     },
 
 
@@ -132,7 +128,6 @@ const Index = {
         this.__search();
         this.__addPhoto();
         this.__addCancel();
-        this.__fileName();
         this.__delete();
     }
 }

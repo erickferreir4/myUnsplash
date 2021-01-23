@@ -44,8 +44,7 @@ class FileModel
                 (
                     id integer primary key,
                     id_user varchar(250) not null,
-                    file varchar(250),
-                    photo_url varchar(250),
+                    photo_url varchar(750),
                     label varchar(250) not null
                 )';
 
@@ -72,16 +71,15 @@ class FileModel
     public function save(stdClass $data)
     {
         $sql = 'insert into files
-                    (id_user, file, photo_url, label)
+                    (id_user, photo_url, label)
                 values
-                    (:id_user, :file, :photo_url, :label)';
+                    (:id_user, :photo_url, :label)';
 
         Transaction::log($sql);
 
         $stmt = self::$conn->prepare($sql);
 
         $stmt->bindValue(':id_user', $data->email);
-        $stmt->bindValue(':file', $data->file);
         $stmt->bindValue(':photo_url', $data->file_url);
         $stmt->bindValue(':label', $data->label);
 
@@ -100,8 +98,21 @@ class FileModel
     }
 
     
-    public function delete($email, $file)
+    public function delete($data)
     {
+        $sql = 'delete from files
+                where
+                    id_user = :email
+                        and
+                    photo_url = :photo_url';
+
+        Transaction::log($sql);
+        $stmt = self::$conn->prepare($sql);
+
+        $stmt->bindValue(':email', $data->email);
+        $stmt->bindValue(':photo_url', $data->file);
+
+        return $stmt->execute() ? true : false;
     }
 
 

@@ -5,7 +5,7 @@
             <img src="/assets/imgs/user.svg"/>
             <span>
                 <h3>My Unsplash</h3>
-                <p>email@email.com</p>
+                <p id="user-id"><?=$_SESSION['login']?></p>
             </span>
         </div>
 
