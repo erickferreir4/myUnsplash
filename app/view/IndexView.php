@@ -19,7 +19,7 @@
             <h3>Add a new photo</h3>
             <form enctype="multipart/form-data" action="/file/add" method="POST">
                 <label>Label</label>
-                <input type="text" name="label" placeholder="" required/>
+                <input  maxlength="100" type="text" name="label" placeholder="" required/>
                 
                 <label>Photo URL</label>
                 <input type="text" name="photo-url" placeholder="" />

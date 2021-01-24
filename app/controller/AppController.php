@@ -11,12 +11,18 @@ class AppController
     {
     }
 
+    /**
+     *  Router controller
+     */
     public function router() : void
     {
         $load = $this->getUri();
         new $load();
     }
 
+    /**
+     *  Get uri to find controller
+     */
     private function getUri() : string
     {
         $path = $_SERVER['REQUEST_URI'];

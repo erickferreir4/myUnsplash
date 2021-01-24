@@ -3,6 +3,7 @@
     align-items: center;
     padding: 30px 100px;
 }
+
 .header-center > div:first-of-type {
     display: flex;
     align-items: center;
@@ -56,4 +57,39 @@
     border-radius: 12px;
     padding: 18px;
     width: 140px;
+}
+
+
+@media (max-width: 768px) {
+    .header-center {
+        padding: 30px;
+        grid-template:
+            'top top'
+            'left right';
+        display: grid;
+    }
+
+    .header-center > div:first-of-type {
+        grid-area: top;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .header-center div:nth-of-type(2) {
+        grid-area: left;
+    }
+    .header-center div:last-of-type {
+        grid-area: right;
+    }
+    .header-center div input  {
+        width: 100%;
+        padding: 13px;
+        font-size: 12px;
+    }
+    .header-center div button  {
+        font-size: 14px;
+        padding: 13px;
+        width: 100%;
+    }
+
+
 }

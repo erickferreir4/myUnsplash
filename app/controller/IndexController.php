@@ -25,12 +25,15 @@ class IndexController
         $this->setTitle('Home');
         $this->layout('Index');
 
-        echo '<pre>';
-        var_dump($_SESSION);
-        var_dump($this->getFiles($_SESSION['login']));
+        //echo '<pre>';
+        //var_dump($_SESSION);
+        //var_dump($this->getFiles($_SESSION['login']));
         //session_destroy();
     }
 
+    /**
+     *  Add Assets to view
+     */
     public function addAssets()
     {
         $this->setAssets( new Assets );
@@ -40,6 +43,10 @@ class IndexController
         $this->addJs('index');
     }
 
+    /**
+     *  Convert to html result
+     *  @param {array} $result - all photos result
+     */
     public function toHtml($result)
     {
         $html = '';
@@ -50,21 +57,27 @@ class IndexController
             $html .= $figure;
         }
 
+        if( empty($html) ) {
+            $html = file_get_contents(__DIR__ . '/../html/templates/no-fotos.html');
+        }
+
         return $html;
     }
 
+    /**
+     *  Get files user
+     *  @param {string} $email - email user to find photos
+     */
     public function getFiles($email)
     {
         $model = new FileModel;
 
         try {
             $result = $model->find($email);
-            //$result = $model->all();
             $model->close();
             return $result;
         } catch( Exception $e ) {
             $model->rollback($e->getMessage());
-            echo $e->getMessage();
         }
     }
 }

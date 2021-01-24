@@ -5,6 +5,9 @@ namespace app\controller;
 use app\traits\TemplateTrait;
 use app\lib\Assets;
 
+/**
+ *  Login controller
+ */
 class LoginController
 {
     use TemplateTrait;
@@ -16,6 +19,9 @@ class LoginController
         $this->layout('Login');
     }
 
+    /**
+     *  Add assets to view
+     */
     private function addAssets()
     {
         $this->setAssets( new Assets );

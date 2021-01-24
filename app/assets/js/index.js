@@ -113,6 +113,11 @@ const Index = {
 
             fetch("/file/delete", {method: "POST",body: data})
             ev.target.closest('li').remove();
+
+
+            if( !doc.querySelectorAll('#js-grid li').length ) {
+                location.reload();
+            } 
         }
 
         btn.forEach( el => {

@@ -21,7 +21,7 @@ class FileController
             $this->$action();
         }
         else {
-            header('location:/index');
+            header('location:/');
         }
     }
 
@@ -49,14 +49,14 @@ class FileController
             try {
                 $model->delete($data);
                 $model->close();
-                header('location:/index');
+                header('location:/');
             } catch( Exception $e ) {
                 $model->rollback($e->getMessage());
-                header('location:/index');
+                header('location:/');
             }
         }
         else {
-            header('location:/index');
+            header('location:/');
         }
     }
 
@@ -71,7 +71,12 @@ class FileController
         $data->file_url = filter_var($_POST['photo-url'], FILTER_SANITIZE_SPECIAL_CHARS);
         $data->label = filter_var($_POST['label'], FILTER_SANITIZE_SPECIAL_CHARS);
 
-        $this->saveFiles($data);
+        if( filter_var($data->file_url, FILTER_VALIDATE_URL) ) {
+            $this->saveFiles($data);
+        }
+        else {
+            header('location:/');
+        }
     }
 
     /**
@@ -85,13 +90,13 @@ class FileController
             try {
                 self::$model->save($data);
                 self::$model->close();
-                header('location:/index');
+                header('location:/');
             } catch( Exception $e ) {
                 self::$model->rollback($e->getMessage());
-                header('location:/index');
+                header('location:/');
             }
         }else {
-            header('location:/index');
+            header('location:/');
         }
     }
 }

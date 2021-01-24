@@ -62,11 +62,19 @@ class Transaction
         }
     }
 
+    /**
+     *  Set logger class
+     *  @param {ILogger} $logger - class logger 
+     */
     public static function setLogger(ILogger $logger) : void
     {
         self::$logger = $logger; 
     }
     
+    /**
+     *  Register log 
+     *  @param {string} $message - message to register
+     */
     public static function log($message) : void
     {
         self::$logger->write($message);
