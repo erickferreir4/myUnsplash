@@ -53,7 +53,7 @@ const Index = {
         
         let closure_ = (ev) => {
             let search = ev.target.value
-            let grid = doc.querySelectorAll('#js-grid li')
+            let grid = doc.querySelectorAll('#js-grid li:not(.no-fotos)')
 
             grid.forEach( el => {
                 let img_name = el.querySelector('figcaption').innerText
