@@ -2,9 +2,9 @@
 # [MyUnsplash](#)
 
 
-### Simple photo url gallery
+### Simple photo gallery
 
-#### with myunsplash you can store image links all in one place
+#### with myUnsplash you can store image links all in one place.
 
 
 ![MyUnsplash](https://github.com/erickferreir4/myUnsplash/blob/master/app/assets/imgs/myUnsplash.png?raw=true)
@@ -28,8 +28,8 @@ some techniques that were applied in the development
 - Gateways
 
     TableDataMapper
-        FileController.php FileModel.php domain
-        AuthController.php AuthModel.php domain
+        FileController.php domain to FileModel.php
+        AuthController.php domain to AuthModel.php
 
 
 - Transaction
