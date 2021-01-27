@@ -1,0 +1,19 @@
+name: Deployment workflow
+on: 
+    push:
+        branches: [ master ]
+
+jobs:
+    job_one:
+        name: Deploy
+        runs-on: ubuntu-latest
+        steps:
+        - name: testing gcp server ssh connection
+          uses: appleboy/ssh-action@master
+          with:
+              host: 35.230.100.140
+              username: erickferreira
+              key: ${{ secrets.GCP_SECRET }}
+              port: 22
+              scripts: |
+                  ls -l
