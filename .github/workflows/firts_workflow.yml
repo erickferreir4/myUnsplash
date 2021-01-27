@@ -4,7 +4,7 @@ on: [push]
 jobs:
   build:
     env:
-      key1: ${{secrets.gcp.USERNAME}}
+      key1: ${{ env.GCP }}
     runs-on: ubuntu-latest
 
     steps:
