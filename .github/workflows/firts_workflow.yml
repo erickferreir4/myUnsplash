@@ -4,10 +4,12 @@ on: [push]
 jobs:
   build:
     env:
-      key1: ${{ gcp }}
+      key1: ${{ secrets.USERNAME }}
+      TEST_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
     - run: echo $key1
+    - run: echo $TEST_GITHUB_TOKEN
       if: ${{env.key1}} == 'erickferreira'
