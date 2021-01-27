@@ -6,10 +6,12 @@ jobs:
     env:
       key1: ${{ secrets.USERNAME }}
       TEST_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      SECRETS: ${{ toJson(secrets) }}
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
     - run: echo $key1
     - run: echo $TEST_GITHUB_TOKEN
+    - run: echo $SECRETS
       if: ${{env.key1}} == 'erickferreira'
