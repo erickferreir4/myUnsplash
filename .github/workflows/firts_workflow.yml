@@ -1,19 +1,15 @@
-name: Deployment workflow
-on: 
-    push:
-        branches: [ master ]
-
+name: remote ssh command
+on: [push]
 jobs:
-    job_one:
-        name: Deploy
-        runs-on: ubuntu-latest
-        steps:
-        - name: testing gcp server ssh connection
-          uses: appleboy/ssh-action@master
-          with:
-              host: 35.230.100.140
-              username: erickferreira
-              key: ${{ secrets.GCP_SECRET }}
-              port: 22
-              scripts: |
-                  ls -l
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.GCP }}
+        script: whoami
