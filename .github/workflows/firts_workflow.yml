@@ -2,6 +2,11 @@ name: remote ssh commandd
 on: [push]
 jobs:
 
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+    - run: ls -l
+
   build:
     name: Build
     runs-on: ubuntu-latest
@@ -9,8 +14,8 @@ jobs:
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.gcp.HOST }}
-        username: ${{ secrets.gcp.USERNAME }}
-        key: ${{ secrets.gcp.GCP }}
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.GCP }}
         debug: true
         script: whoami
