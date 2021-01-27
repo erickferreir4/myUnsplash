@@ -1,12 +1,13 @@
 name: remote ssh command
 on: [push]
-
+  
 jobs:
   build:
     env:
       key1: ${{ secrets.USERNAME }}
       TEST_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       SECRETS: ${{ toJson(secrets) }}
+      TEST: ${{.toJson(github) }} 
     runs-on: ubuntu-latest
 
     steps:
@@ -14,4 +15,5 @@ jobs:
     - run: echo $key1
     - run: echo $TEST_GITHUB_TOKEN
     - run: echo $SECRETS
+    - run: echo $TEST
       if: ${{env.key1}} == 'erickferreira'
