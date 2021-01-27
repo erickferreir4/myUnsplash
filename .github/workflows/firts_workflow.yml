@@ -10,4 +10,4 @@ jobs:
       - name: Use Node.js
         env:
           TEST_KEY: ${{ secrets.USERNAME }}
-        run: echo "$TEST_KEY"
+        run: echo $(TEST_KEY)
