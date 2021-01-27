@@ -2,7 +2,7 @@ name: remote ssh commandd
 on: [push]
 jobs:
 
-  etapas:
+  setup:
     - shell: bash
     env:
       SUPER_SECRET: ${{ secrets.USERNAME }}
