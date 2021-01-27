@@ -3,6 +3,9 @@ on: [push]
 jobs:
 
   setup:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
     - shell: bash
     env:
       SUPER_SECRET: ${{ secrets.USERNAME }}
