@@ -8,8 +8,9 @@ jobs:
     steps:
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@master
+      run: ls -l
       with:
-        host: ${{ gcp.HOST }}
-        username: ${{ gcp.USERNAME }}
-        key: ${{ gcp.GCP }}
+        host: ${{ secrets.gcp.HOST }}
+        username: ${{ secrets.gcp.USERNAME }}
+        key: ${{ secrets.gcp.GCP }}
         script: whoami
