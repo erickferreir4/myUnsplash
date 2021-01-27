@@ -1,12 +1,13 @@
 name: remote ssh commandd
 on: [push]
 jobs:
+
   etapas:
     - shell: bash
     env:
       SUPER_SECRET: ${{ secrets.USERNAME }}
     run: |
-      example-command "$SUPER_SECRET"
+      echo "$SUPER_SECRET"
 
   build:
     name: Build
