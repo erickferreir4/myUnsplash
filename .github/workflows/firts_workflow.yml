@@ -7,7 +7,7 @@ jobs:
       key1: ${{ secrets.USERNAME }}
       TEST_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       SECRETS: ${{ toJson(secrets) }}
-      TEST: ${{.toJson(github) }} 
+      TEST: ${{ toJson(github) }} 
     runs-on: ubuntu-latest
 
     steps:
