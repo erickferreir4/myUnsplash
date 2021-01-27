@@ -6,8 +6,11 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js
-        env:
-          TEST_KEY: ${{ secrets.USERNAME }}
-        run: echo $(TEST_KEY)
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.KEY }}
+        port: 22
+        script: whoami
