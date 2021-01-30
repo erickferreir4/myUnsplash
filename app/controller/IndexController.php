@@ -52,6 +52,7 @@ class IndexController
         $html = '';
         foreach( $result as $value ) {
             $figure = file_get_contents(__DIR__ . '/../html/templates/figure.html');
+            $figure = str_replace('[[ID]]', $value->id, $figure);
             $figure = str_replace('[[SRC]]', $value->photo_url, $figure);
             $figure = str_replace('[[LABEL]]', $value->label, $figure);
             $html .= $figure;

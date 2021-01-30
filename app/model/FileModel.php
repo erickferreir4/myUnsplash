@@ -131,13 +131,17 @@ class FileModel
     {
         $sql = 'DELETE FROM files
                 WHERE
+                    id = :id
+                        AND
                     id_user = :email
                         AND
-                    photo_url = :photo_url';
+                    photo_url = :photo_url;';
+                        
 
         Transaction::log($sql);
         $stmt = self::$conn->prepare($sql);
 
+        $stmt->bindValue(':id', $data->id);
         $stmt->bindValue(':email', $data->email);
         $stmt->bindValue(':photo_url', $data->file);
 

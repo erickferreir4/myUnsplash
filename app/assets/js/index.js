@@ -107,11 +107,14 @@ const Index = {
         let closure_ = ev => {
 
             let file = ev.target.nextElementSibling.src
+            let id = ev.target.dataset.id
 
             let data = new FormData();
             data.append('photo_url', file)
+            data.append('id', id)
 
             fetch("/file/delete", {method: "POST",body: data})
+                //.then( response => console.log(response.json()))
             ev.target.closest('li').remove();
 
 

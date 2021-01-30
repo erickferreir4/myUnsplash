@@ -34,7 +34,10 @@ class FileController
         $data = new stdClass;
         $data->email = $_SESSION['login'];
         $data->file = filter_var($_POST['photo_url'], FILTER_SANITIZE_SPECIAL_CHARS);
+        $data->id = filter_var($_POST['id'], FILTER_SANITIZE_SPECIAL_CHARS);
         
+        //echo json_encode($data);
+        //var_dump($data);
         $this->deleteFiles($data);
     }
 
@@ -44,7 +47,7 @@ class FileController
      */
     private function deleteFiles($data)
     {
-        if( !empty($data->file) && !empty($data->email)) {
+        if( !empty($data->file) && !empty($data->email) && !empty($data->id)) {
             $model = new FileModel;
             try {
                 $model->delete($data);
