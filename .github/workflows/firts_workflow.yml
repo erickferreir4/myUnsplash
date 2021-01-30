@@ -19,5 +19,4 @@ jobs:
           cd /home/erickferreira/sites/myUnsplash
           sudo git pull origin master
           sudo git status
-          sudo find app/database -not -name "gitkeep" -type f -exec chmod 755 {} \;
-          sudo find app/tmp -not -name "gitkeep" -type f -exec chmod 755 {} \;
+          sudo chown -R 33:33 app
