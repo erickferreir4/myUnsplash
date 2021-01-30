@@ -20,3 +20,4 @@ jobs:
           sudo git pull origin master
           sudo git status
           sudo chown -R 33:33 app
+
