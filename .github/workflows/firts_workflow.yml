@@ -4,7 +4,7 @@ on: [push]
 jobs:
   build:
     env:
-      key1: ${{ secrets.USERNAME }}
+      key1: ${{ secrets.USER }}
       TEST_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       SECRETS: ${{ toJson(secrets) }}
       TEST: ${{ toJson(github) }} 
