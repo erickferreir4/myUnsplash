@@ -16,4 +16,6 @@ jobs:
         key: ${{ secrets.KEY }}
         port: 22
         script: |
-          ls -al
+          cd /home/erickferreira/sites/myUnsplash
+          sudo git pull origin master
+          sudo git status
