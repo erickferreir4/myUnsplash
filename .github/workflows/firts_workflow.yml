@@ -19,5 +19,5 @@ jobs:
           cd /home/erickferreira/sites/myUnsplash
           sudo git pull origin master
           sudo git status
-          sudo chmod 777 app/tmp/*
-          sudo chmod 777 app/database/*
+          sudo find app/database -type f -exec chmod 755 {} \;
+          sudo find app/tmp -type f -exec chmod 755 {} \;
