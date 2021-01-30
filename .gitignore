@@ -1,1 +1,4 @@
 *.DS_Store
+/app/database/*
+/app/tmp/*
+/app/tmp/*
