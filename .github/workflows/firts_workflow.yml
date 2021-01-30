@@ -1,19 +1,19 @@
-name: remote ssh command
-on: [push]
-  
-jobs:
-  build:
-    env:
-      key1: ${{ secrets.USER }}
-      TEST_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      SECRETS: ${{ toJson(secrets) }}
-      TEST: ${{ toJson(github) }} 
-    runs-on: ubuntu-latest
+name: Deployment Workflow
+on:
+  push:
+    branches: [ master ]
 
+jobs:
+  job_one:
+    name: Deploy
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - run: echo $key1
-    - run: echo $TEST_GITHUB_TOKEN
-    - run: echo $SECRETS
-    - run: echo $TEST
-      if: ${{env.key1}} == 'erickferreira'
+    - name: testing server ssh connection
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST}}
+        username: ${{ secrets.USERNAME }}
+        key: {{ secrets.KEY }}
+        port: 22
+        script: |
+          ls -l
