@@ -98,6 +98,7 @@
 }
 #js-show-img span img{
     max-width: 100%;
+    max-height: -webkit-fill-available;
 }
 #js-show-img button{
     position: absolute;
