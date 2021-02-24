@@ -88,6 +88,7 @@
     padding: 100px;
     display: none;
     cursor: pointer;
+    z-index: 10;
 }
 #js-show-img.is--active {
     display: flex;
